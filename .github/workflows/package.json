@@ -1,0 +1,47 @@
+{
+  "name": "texture-alpha-channel-tool",
+  "private": true,
+  "version": "1.0.0",
+  "description": "SCS Texture Alpha Channel Management Tool for Simulation Assets",
+  "author": "SCS Modder",
+  "main": "main.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "electron:dist": "vite build && electron-builder"
+  },
+  "dependencies": {
+    "@capacitor/android": "^8.4.0",
+    "@capacitor/cli": "^8.4.0",
+    "@capacitor/core": "^8.4.0",
+    "clsx": "^2.1.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tailwind-merge": "^2.3.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "autoprefixer": "^10.4.19",
+    "electron": "^22.3.27",
+    "electron-builder": "^24.13.3",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.4.5",
+    "vite": "^5.3.1",
+    "vite-plugin-singlefile": "^2.0.1"
+  },
+  "build": {
+    "appId": "com.scs.texturealpha",
+    "productName": "Texture Alpha Channel Tool",
+    "icon": "build/alpha-icon.ico",
+    "win": {
+      "target": "dir",
+      "icon": "build/alpha-icon.ico"
+    },
+    "files": [
+      "dist/**/*",
+      "main.js"
+    ]
+  }
+}
